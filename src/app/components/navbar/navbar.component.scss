@@ -1,0 +1,7 @@
+button.navbar-toggler {
+
+  &:focus,
+  &:focus-visible {
+    box-shadow: none !important;
+  }
+}
