@@ -4,21 +4,30 @@ $state-bold: #272E35;
 /* Font */
 $heading-font: 'Bai Jamjuree', sans-serif;
 $para-font: 'Inter', sans-serif;
-
+$rem: 8px;
 /* Gradient */
 $gradient: linear-gradient(45deg, #B16CEA 14.06%, #FF5E69 44.79%, #FF8A56 71.87%, #FFA84B 100%);
 
+.general {
+  font-size: $rem;
+  --bs-font-sans-serif: $para-font;
+  font-family: $para-font;
+  background-color: var(--bg-main);
+}
+
 /* Dark Mode */
 :root {
+  @extend .general;
   --bg-main: #161513;
   --bg-secondary: #1C1C22;
   --color-main: #F0F2F5;
   --color-secondary: #FFFFFF;
-  font-family: $para-font;
+
 }
 
 /* light Mode */
 :root.light {
+  @extend .general;
   --bg-main: #F0F2F5;
   --bg-secondary: #FFFFFF;
   --color-main: #161513;
@@ -90,10 +99,12 @@ $colors: (
   @include font(1.5rem, 1.875rem, $para-font, 600)
 }
 
+
 /* Linear gradient */
-.gradient-text {
+.gradient-md-text, .gradient-text {
   background: -webkit-#{$gradient};
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -103,6 +114,7 @@ $colors: (
 
 /* Buttons */
 .button {
+  border: none;
   border-radius: 2rem;
   padding: 0.5rem 1rem !important;
 }
@@ -110,6 +122,7 @@ $colors: (
 .main-btn {
   @extend .button;
   background-image: $gradient;
+  color: var(--color-main)
 }
 
 .secondary-btn {
@@ -121,21 +134,47 @@ $colors: (
 .outline-btn {
   @extend .button;
   border: 1px solid var(--color-main);
+  color: var(--color-main);
+  background-color: var(--bg-main);
+}
+
+/* ---------------------------------------------------------- */
+
+
+
+
+
+
+/* Media Query */
+$grid-breakpoints: (
+  1: 375px,
+  2: 576px,
+  3: 768px,
+  4: 992px,
+);
+
+$i: 0;
+
+@each $key, $value in $grid-breakpoints {
+  $i: $i+1;
+
+  @media screen and (min-width: $value) {
+
+    :root,
+    :root.light {
+      font-size: 8px + $i*2px;
+    }
+  }
 }
 
 
-
-
-
-
-
-
-
-
-@media screen and (max-width : 991px) {
+@media screen and (min-width : 991px) {
   .gradient-md-text {
-    background: -webkit-#{$gradient};
+    background: none;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: var(--color-main) !important;
+    color: var(--color-main) !important;
   }
+
 }

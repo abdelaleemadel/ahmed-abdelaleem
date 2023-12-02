@@ -1,0 +1,147 @@
+#news {
+  min-height: 10rem;
+  overflow-x: hidden;
+
+  #static-bar {
+    min-height: 4rem;
+  }
+
+  #moving-bar {
+    left: -1%;
+    top: calc(50% - 2rem);
+    height: 4rem;
+    width: 102%;
+    color: var(--bg-main);
+    background-color: var(--color-main);
+    transform: rotateZ(-3.5deg);
+
+    /* #moving-words-1 {
+      animation: moving-1 10s infinite linear forwards;
+
+      transform-style: preserve-3d;
+
+    } */
+
+    /* #moving-words-2 {
+      animation: moving-2 10s infinite linear forwards;
+    } */
+
+
+  }
+
+}
+
+.star {
+  min-width: 2rem;
+  height: 2rem;
+
+  .circle {
+    width: 54%;
+    height: 54%;
+    background-color: var(--color-main);
+
+    &:first-child {
+      border-radius: 0 0 80% 0;
+      top: -4% !important;
+      left: -4% !important;
+    }
+
+
+    &:nth-child(2) {
+      border-radius: 0 0 0 80%;
+      top: -4% !important;
+      right: -4%;
+    }
+
+    &:nth-child(3) {
+      border-radius: 0 80% 0 0;
+      bottom: -4%;
+      left: -4%;
+    }
+
+    &:nth-child(4) {
+      border-radius: 80% 0 0 0;
+      bottom: -4%;
+      right: -4%;
+    }
+
+  }
+}
+
+
+
+/* Previous Animation */
+/* @keyframes moving-1 {
+  0% {
+    transform: rotateY(0);
+  }
+
+
+  100% {
+    transform: rotateY(360deg)
+  }
+} */
+
+/*@keyframes moving-2 {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+ */
+
+@media screen and (min-width:1500px) {
+  #moving-bar {
+    transform: rotateZ(-2deg) !important;
+  }
+}
+
+/*clip-path: margin-box;
+clip-path: border-box;
+clip-path: padding-box;
+clip-path: content-box;
+clip-path: fill-box;
+clip-path: stroke-box;
+clip-path: view-box;
+
+*/
+
+
+#moving-words {
+  margin: 0;
+  list-style: none;
+  transform-style: preserve-3d;
+  animation: three-dimensions-circle 30s linear infinite;
+  transform: rotateX(-90deg) rotate(0);
+  min-width: 100%;
+
+  div.moving-word {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    backface-visibility: hidden;
+  }
+
+  @for $i from 1 through 48 {
+    div.moving-word:nth-child(#{$i}) {
+      transform: translate(-50%, -50%) rotate(#{$i * 7.5 - 7.5}deg) translateY(-72rem) rotateX(90deg);
+    }
+  }
+}
+
+
+
+
+
+@keyframes three-dimensions-circle {
+  0% {
+    transform: rotateX(-90deg) rotate(0);
+  }
+
+  100% {
+    transform: rotateX(-90deg) rotate(-360deg);
+  }
+}
