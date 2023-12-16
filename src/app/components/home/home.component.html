@@ -1,5 +1,6 @@
+<!-- Name and title -->
 <section
-  class="main-bg main-color min-vh-100 d-flex flex-column justify-content-md-center align-items-center text-md-center mx-auto container"
+  class="main-bg main-section main-color d-flex flex-column justify-content-md-center align-items-center text-md-center mx-auto container"
   id="about">
   <h1 class="heading-1">
     <span class="gradient-text">Hi, I'm Ahmed<span class="d-none d-lg-inline">,</span></span> Creative Front-end Web
@@ -12,10 +13,11 @@
     <button type="button" class="main-btn mx-3">GET IN TOUCH</button>
     <button type="button" class="outline-btn mx-3">VIEW ALL WORKS</button>
   </div>
-
-
 </section>
-<section id="news" class="w-100 mb-4 position-relative  d-flex flex-column justify-content-center">
+
+<!-- =========================================================================== -->
+<!-- The moving section -->
+<section id="news" class="w-100 mb-5 position-relative  d-flex flex-column justify-content-center">
   <div id="static-bar" class="gradient w-100">
   </div>
   <div id="moving-bar" class="heading-6 px-3 d-flex align-items-center position-absolute overflow-hidden">
@@ -49,66 +51,36 @@
           DISCOVER
         </div>
       </ng-template>
-
-
     </div>
-    <!-- <div id="moving-words-2"
-      class="w-100 d-flex position-absolute border-primary justify-content-evenly align-items-center border border-primary">
-      <div class="star position-relative gradient mx-2">
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-      </div>
-      <div class="mx-2">
-        DESIGN
-      </div>
-      <div class="star position-relative gradient mx-2">
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-      </div>
-      <div class="mx-2">
-        DEVELOPE
-      </div>
-      <div class="star position-relative gradient mx-2">
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-      </div>
-      <div class="mx-2">
-        DISCOVER
-      </div>
-      <div class="star position-relative gradient mx-2">
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-      </div>
-      <div class="mx-2">
-        DESIGN
-      </div>
-      <div class="star position-relative gradient mx-2">
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-      </div>
-      <div class="mx-2">
-        DEVELOPE
-      </div>
-      <div class="star position-relative gradient mx-2">
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-        <div class="circle position-absolute"></div>
-      </div>
-      <div class="mx-2">
-        DISCOVER
-      </div>
-    </div> -->
+  </div>
+</section>
 
+<!-- ========================================================================== -->
+<!-- MY PROJECTS -->
+<app-projects></app-projects>
+
+<!-- ========================================================================== -->
+<!-- Languages & SKILLS & FRAMEWORKS -->
+<section class="main-bg main-color py-5">
+  <div class="container">
+    <p class="heading-3 mb-5">
+      What I Do.
+    </p>
+    <!-- Nav tabs -->
+    <nav class="navbar" data-bs-theme="dark">
+      <div class="container">
+        <ul class="list-unstyled d-flex justify-content-evenly w-100">
+          <li class="nav-item">
+            <a class="nav-link  heading-6" routerLinkActive="gradient-text" aria-current="page"
+              routerLink="languages">Languages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  heading-6" routerLinkActive="gradient-text" aria-current="page"
+              routerLink="frameworks">Frameworks</a>
+          </li>
+        </ul>
+        <router-outlet></router-outlet>
+      </div>
+    </nav>
   </div>
 </section>
