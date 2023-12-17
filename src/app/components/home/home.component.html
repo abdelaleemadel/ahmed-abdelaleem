@@ -1,6 +1,6 @@
 <!-- Name and title -->
 <section
-  class="main-bg main-section main-color d-flex flex-column justify-content-md-center align-items-center text-md-center mx-auto container"
+  class="main-bg main-section main-color d-flex flex-column justify-content-center align-items-center text-md-center mx-auto container"
   id="about">
   <h1 class="heading-1">
     <span class="gradient-text">Hi, I'm Ahmed<span class="d-none d-lg-inline">,</span></span> Creative Front-end Web
@@ -68,19 +68,17 @@
     </p>
     <!-- Nav tabs -->
     <nav class="navbar" data-bs-theme="dark">
-      <div class="container">
-        <ul class="list-unstyled d-flex justify-content-evenly w-100">
-          <li class="nav-item">
-            <a class="nav-link  heading-6" routerLinkActive="gradient-text" aria-current="page"
-              routerLink="languages">Languages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link  heading-6" routerLinkActive="gradient-text" aria-current="page"
-              routerLink="frameworks">Frameworks</a>
-          </li>
-        </ul>
-        <router-outlet></router-outlet>
-      </div>
+      <ul class="list-unstyled d-flex justify-content-evenly w-100">
+        <li class="nav-item text-center">
+          <a class="nav-link  heading-6" routerLinkActive="gradient-text" aria-current="page"
+            routerLink="languages">Languages</a>
+        </li>
+        <li class="nav-item text-center">
+          <a class="nav-link  heading-6 text-wrap" routerLinkActive="gradient-text" aria-current="page"
+            routerLink="frameworks">Frameworks & Libraries</a>
+        </li>
+      </ul>
     </nav>
+    <router-outlet></router-outlet>
   </div>
 </section>
