@@ -1,0 +1,13 @@
+<section class="main-bg main-color py-5">
+  <div class="container">
+    <p class="heading-1">
+      {{projects[0].name}}
+    </p>
+  </div>
+
+  <div class="row gy-5">
+    <div [innerHTML]="projects[0].source | safe" class="text-center">
+
+    </div>
+  </div>
+</section>

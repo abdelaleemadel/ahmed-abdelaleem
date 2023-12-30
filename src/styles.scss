@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@700&family=Inter:wght@400;600&display=swap');
-$state-bold: #272E35;
 /* Font */
 $heading-font: 'Bai Jamjuree', sans-serif;
 $para-font: 'Inter', sans-serif;
@@ -9,6 +8,7 @@ $rem: 8px;
 $gradient: linear-gradient(45deg, #B16CEA 14.06%, #FF5E69 44.79%, #FF8A56 71.87%, #FFA84B 100%);
 
 .general {
+  --state-bold: #272E35;
   font-size: $rem;
   --bs-font-sans-serif: $para-font;
   font-family: $para-font;
@@ -56,6 +56,18 @@ $colors: (
   }
 }
 
+@each $key, $value in $bg {
+  .inv-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $colors {
+  .inv-#{$key} {
+    background-color: $value !important;
+  }
+}
+
 /* Headings' Fonts */
 @mixin font($font-size, $line-height, $font-family, $font-weight: 700) {
   font-feature-settings: 'clig' 0, 'liga' 0;
@@ -99,6 +111,9 @@ $colors: (
   @include font(1.5rem, 1.875rem, $para-font, 600)
 }
 
+.para-5 {
+  @include font(1rem, 1.875rem, $para-font, 600)
+}
 
 /* Linear gradient */
 .gradient-md-text, .gradient-text {

@@ -1,0 +1,16 @@
+.form-control {
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &::placeholder {
+    color: gray;
+    opacity: 1;
+    /* Firefox */
+  }
+
+  &::-ms-input-placeholder {
+    /* Edge 12 -18 */
+    color: gray;
+  }
+}
