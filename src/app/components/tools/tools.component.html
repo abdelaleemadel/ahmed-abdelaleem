@@ -1,0 +1,18 @@
+<nav class="navbar" data-bs-theme="dark">
+  <ul class="list-unstyled d-flex justify-content-evenly w-100">
+    <li class="nav-item text-center  cursor-pointer" (click)="showLanguages()">
+      <p [class]="languages?'heading-6 gradient-text':'heading-6'" aria-current="page">Languages</p>
+    </li>
+    <li class="nav-item text-center cursor-pointer" (click)="showFrameworks()">
+      <p [class]="!languages?'heading-6 gradient-text':'heading-6 text-wrap'" aria-current="page">Frameworks &
+        Libraries</p>
+    </li>
+  </ul>
+</nav>
+<section class=" w-100 d-flex flex-wrap gap-5 justify-content-center ">
+  <div class="d-flex flex-column align-items-center secondary-bg px-4 py-4 justify-content-between"
+    *ngFor="let image of shownTools">
+    <img [src]="path+image+'.svg'" width="60" [alt]="image+' logo'" [title]="image">
+    <p class="heading-6 mt-3 mb-0">{{image}}</p>
+  </div>
+</section>

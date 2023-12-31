@@ -5,8 +5,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { LanguagesComponent } from './components/languages/languages.component';
-import { FrameworksComponent } from './components/frameworks/frameworks.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProjectdetailsComponent } from './components/projectdetails/projectdetails.component';
 import { SafePipe } from './pipes/safe.pipe';
@@ -15,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { NgOptimizedImage } from '@angular/common';
+import { ToolsComponent } from './components/tools/tools.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +21,12 @@ import { NgOptimizedImage } from '@angular/common';
     HomeComponent,
     NavbarComponent,
     ProjectsComponent,
-    LanguagesComponent,
-    FrameworksComponent,
     FooterComponent,
     ProjectdetailsComponent,
     SafePipe,
     ContactComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    ToolsComponent
   ],
   imports: [
     BrowserModule,

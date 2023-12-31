@@ -153,8 +153,13 @@ $colors: (
   background-color: var(--bg-main);
 }
 
+/* Additional classes */
 .newline {
   white-space: pre-line;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 /* ---------------------------------------------------------- */
