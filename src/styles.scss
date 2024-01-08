@@ -169,7 +169,11 @@ $colors: (
 /* ---------------------------------------------------------- */
 
 
+/* Scrolling */
 
+html {
+  scroll-behavior: smooth !important;
+}
 
 
 
