@@ -7,5 +7,5 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class HomeComponent {
-  tools = { languages: [`Javascript`, `Typescript`, `CSS`, `HTML`, `Sass`], frameworks: [`angular`, `bootstrap`, `jquery`, `react`] }
+  tools = { languages: [`Javascript`, `Typescript`, `CSS`, `HTML`, `Sass`], frameworks: [`Angular`, `Bootstrap`, `JQuery`, `React`] }
 }

@@ -3,7 +3,7 @@
     <p class="heading-1">
       {{project?.name}}
     </p>
-    <div class="row gy-5 gx-5">
+    <div class="row  gx-5 my-5">
       <!-- If Video  -->
       <div [innerHTML]="project?.vsource | safe" class="text-center frame-container" *ngIf="project?.type === 'video'">
       </div>
@@ -33,7 +33,10 @@
           </button>
         </div>
       </div>
-      <!-- Project Description -->
+    </div>
+    <!-- Project Description -->
+
+    <div class="row gy-3 gx-5 my-5">
       <div class="col-12 col-md-5 ">
         <p class="heading-5 gradient-text">ABOUT THE PROJECT</p>
         <p class="para-4">{{project?.purpose}}</p>
@@ -41,9 +44,15 @@
       <div class="col-12 col-md-7">
         <p class="para-1 newline">{{project?.description}}</p>
       </div>
-
     </div>
 
+    <div class="row gy-3 gx-5 my-5">
+      <!-- Languages &  FRAMEWORKS !!! tools component -->
+      <div class="col-12">
+        <p class="heading-5 mb-5 text-wrap gradient-text"> The Project is built with. </p>
+        <app-tools [tools]="project?.tools"></app-tools>
+      </div>
+    </div>
   </div>
 
 
