@@ -10,7 +10,7 @@
     A Front-end Web Developer. I specialize in building interactive and responsive web applications using Angular.
   </p>
   <div class="d-flex">
-    <button type="button" class="main-btn mx-3 para-5" (click)="goTo('contact')">GET IN TOUCH</button>
+    <button type="button" class="main-btn mx-3 para-5" routerLink="./contact">GET IN TOUCH</button>
     <button type="button" class="outline-btn mx-3 para-5" (click)="goTo('projects')">VIEW ALL WORKS</button>
   </div>
 </section>
@@ -58,7 +58,7 @@
 
 <!-- ========================================================================== -->
 <!-- MY PROJECTS -->
-<section class="main-bg main-color py-5" id="projects">
+<section class="main-bg main-color py-5">
   <div class="container">
     <p class="heading-3">
       Look at My<br /> <span class="gradient-text">Projects</span>
@@ -77,7 +77,3 @@
   </div>
 </section>
 <!-- Tools -->
-
-<!-- ========================================================================== -->
-<app-contact></app-contact>
-<!-- Contact -->

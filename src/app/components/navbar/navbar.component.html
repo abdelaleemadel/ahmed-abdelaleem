@@ -12,14 +12,14 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link cursor-pointer main-color para-1" aria-current="page" (click)="goTo('projects')"
+          <a class="nav-link cursor-pointer main-color para-1" aria-current="page" routerLink="./projectDetails"
             [attr.data-bs-toggle]="isSmall?'collapse':''" data-bs-target="#navbarSupportedContent">Projects</a>
         </li>
       </ul>
       <ul class="navbar-nav  mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link secondary-btn para-1 fw-bolder text-center cursor-pointer" aria-current="page"
-            (click)="goTo('contact')" [attr.data-bs-toggle]="isSmall?'collapse':''"
+            routerLink="./contact" [attr.data-bs-toggle]="isSmall?'collapse':''"
             data-bs-target="#navbarSupportedContent">LET'S TALK</a>
         </li>
       </ul>

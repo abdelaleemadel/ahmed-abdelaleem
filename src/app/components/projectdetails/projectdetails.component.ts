@@ -14,23 +14,37 @@ export class ProjectdetailsComponent implements OnInit {
   source: string[] = [`home`, `details`, `hover`, `categories`];
   project: any = null;
   projects = [
-    { name: 'E-Commerce', type: 'video', vsource: `<iframe class="e2e-iframe-trusted-src position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100 border-0"  src="https://www.youtube.com/embed/jnPLFJYV8tg?si=GsdZ3KAQN1xhaRhO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`, purpose: `Desgin a SaaS tool to visualize and manage coomplex organizations`, description: `The newly founded startup wants to support organizations and teams in the design, control and optimization of their work.\n The tools aims to be an intelligent companion in setting up highly efficient organization structures to tackle overhead and lacks of transparency`, tools: { languages: [`Typescript`, `CSS`, `HTML`], frameworks: [`Angular`, `Bootstrap`, `JQuery`] } },
+    { name: 'E-Commerce', type: 'video', vsource: `<iframe class="e2e-iframe-trusted-src position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100 border-0"  src="https://www.youtube.com/embed/jnPLFJYV8tg?si=GsdZ3KAQN1xhaRhO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`, purpose: `El-Adl Market: A modern e-commerce web application that offers you a wide range of products at affordable prices and high quality`, description: `El-Adl Market is an e-commerce web application that allows users to purchase products online. Users can browse different products and filter them by price and rating. The application was built using Angular, Node.js, MongoDB, and Bootstrap. It also uses an application programming interface (API) to fetch various data.`, tools: { languages: [`Typescript`, `CSS`, `HTML`], frameworks: [`Angular`, `Bootstrap`, `JQuery`] }, github: `https://github.com/abdelaleemadel/El-Adl-Market`, live: `https://el-adl-market.vercel.app/` },
 
-    { name: 'Recipes', type: 'video', vsource: '<iframe class="e2e-iframe-trusted-src position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100 border-0" src="https://www.youtube.com/embed/9oJQrVE8R3k?si=Nn0WSX-4lnxqAmDi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>', purpose: `Desgin a SaaS tool to visualize and manage coomplex organizations`, description: `The newly founded startup wants to support organizations and teams in the design, control and optimization of their work.\n The tools aims to be an intelligent companion in setting up highly efficient organization structures to tackle overhead and lacks of transparency`, tools: { languages: [`Javascript`, `CSS`, `HTML`], frameworks: [`Bootstrap`, `JQuery`] } },
+    { name: 'Recipes', type: 'video', vsource: '<iframe class="e2e-iframe-trusted-src position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100 border-0" src="https://www.youtube.com/embed/9oJQrVE8R3k?si=Nn0WSX-4lnxqAmDi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>', purpose: `Recipes: Your online destination for finding and sharing delectable dishes from around the world`, description: `Recipes is a web application that allows users to browse and share recipes online. Users can search for recipes by name, ingredient, or category, and view the recipe details including the ingredients, instructions, and nutritional information. The application is built with JavaScript, Bootstrap, and jQuery. It also uses API to get the recipe data.`, tools: { languages: [`Javascript`, `CSS`, `HTML`], frameworks: [`Bootstrap`, `JQuery`] }, github: `https://github.com/abdelaleemadel/recipes`, live: `https://abdelaleemadel.github.io/recipes/` },
 
-    { name: 'Free Games ', type: 'img', source: this.source, purpose: `Desgin a SaaS tool to visualize and manage coomplex organizations`, description: `The newly founded startup wants to support organizations and teams in the design, control and optimization of their work.\n\n The tools aims to be an intelligent companion in setting up highly efficient organization structures to tackle overhead and lacks of transparency`, tools: { languages: [`Javascript`, `CSS`, `HTML`], frameworks: [`Bootstrap`, `JQuery`] } }]
+    { name: 'Free Games ', type: 'img', source: this.source, purpose: `Free Games: Your online source for playing and discovering awesome games for free.`, description: `Free Games is a web application that allows users to play various games online for free. Users can choose from different genres and categories of games, and enjoy the fun and challenge of gaming. The application was built using HTML, CSS, JavaScript, and Bootstrap. It also uses an API to fetch the game data from a third-party source.`, tools: { languages: [`Javascript`, `CSS`, `HTML`], frameworks: [`Bootstrap`, `JQuery`] }, github: `https://github.com/abdelaleemadel/freegames`, live: `https://abdelaleemadel.github.io/freegames/` }]
 
   ngOnInit(): void {
+
+    this.displaySpecificProject()
+
+  }
+
+  showProject(url: string | undefined) {
+    window.open(url);
+  }
+
+  displaySpecificProject() {
     this._ActivatedRoute.paramMap.subscribe((params) => {
       this.id = Number(params.get('id'));
-      console.log(Number(this.id), this.projects.length);
       if (isNaN(this.id) || (this.id > this.projects.length - 1) || this.id < 0) {
         this._Router.navigate(['notfound'])
       } else {
-        this.project = this.projects[this.id]
+        this.project = this.projects[this.id];
+        this.scrollToTopFunction()
       }
-
     })
   }
 
+  /* When navigating between projects in project details */
+  scrollToTopFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
 }

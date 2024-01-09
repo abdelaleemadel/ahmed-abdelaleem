@@ -1,5 +1,7 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -7,15 +9,25 @@ import { ViewportScroller } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
-  constructor(private scroller: ViewportScroller) { }
+export class NavbarComponent implements OnInit {
+  constructor(private scroller: ViewportScroller, private _Router: Router) { }
   availWidth: number = 993;
-  @Input() isSmall: boolean = false;
+  isSmall: boolean = false;
+  ngOnInit(): void {
+    this.screenWidth();
+  }
+
+  screenWidth() {
+    this.availWidth = screen.availWidth;
+    this.isSmall = !(this.availWidth > 991)
+    addEventListener('resize', () => {
+      this.availWidth = screen.availWidth;
+      this.isSmall = !(this.availWidth > 991)
+    })
+  }
 
 
   goTo(section: string) {
     this.scroller.scrollToAnchor(section)
   }
-
-
 }
