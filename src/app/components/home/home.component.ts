@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   constructor(private scroller: ViewportScroller, private router: Router) { }
   tools = { languages: [`Javascript`, `Typescript`, `CSS`, `HTML`, `Sass`], frameworks: [`Angular`, `Bootstrap`, `JQuery`, `React`] }
-  goToProjects() {
-    this.scroller.scrollToAnchor('works')
+  goTo(section: string) {
+    this.scroller.scrollToAnchor(section)
   }
 }

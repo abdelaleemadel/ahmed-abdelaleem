@@ -1,5 +1,5 @@
-<app-navbar></app-navbar>
-<div class="routing-div">
+<app-navbar [isSmall]="isSmall"></app-navbar>
+<div class="routing-div" [attr.data-bs-toggle]="isSmall?'collapse':''" data-bs-target="#navbarSupportedContent">
   <router-outlet></router-outlet>
   <app-footer></app-footer>
 </div>

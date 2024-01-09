@@ -137,13 +137,27 @@ $colors: (
 .main-btn {
   @extend .button;
   background-image: $gradient;
-  color: var(--color-main)
+  color: var(--color-main);
+  border: 1px solid var(--bg-main);
+
+  &:hover:not(:disabled) {
+    background-image: none;
+    color: var(--color-main);
+    background-color: var(--bg-main);
+    border: 1px solid var(--color-main);
+
+  }
 }
 
 .secondary-btn {
   @extend .button;
   color: var(--bg-main) !important;
   background-color: var(--color-main) !important;
+
+  &:hover {
+    background-image: $gradient;
+    color: var(--color-main);
+  }
 }
 
 .outline-btn {
@@ -151,7 +165,14 @@ $colors: (
   border: 1px solid var(--color-main);
   color: var(--color-main);
   background-color: var(--bg-main);
+
+  &:hover {
+    background-image: $gradient;
+    color: var(--color-main);
+    border: 1px solid var(--bg-main);
+  }
 }
+
 
 /* Additional classes */
 .newline {

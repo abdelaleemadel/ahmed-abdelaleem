@@ -19,10 +19,13 @@ export class ProjectsComponent implements OnChanges {
 
   }
   allProjects = [
-    { id: 0, name: 'E-Commerce', source: `${this.path}/e-commerce.PNG` },
-    { id: 1, name: 'Recipes', source: `${this.path}/recipes.PNG` },
-    { id: 2, name: 'Free Games', source: `${this.path}/freeGames.png` },
+    { id: 0, name: 'E-Commerce', source: `${this.path}/e-commerce.PNG`, github: `https://github.com/abdelaleemadel/El-Adl-Market`, live: `https://el-adl-market.vercel.app/` },
+    { id: 1, name: 'Recipes', source: `${this.path}/recipes.PNG`, github: `https://github.com/abdelaleemadel/recipes`, live: `https://abdelaleemadel.github.io/recipes/` },
+    { id: 2, name: 'Free Games', source: `${this.path}/freeGames.png`, github: `https://github.com/abdelaleemadel/freegames`, live: `https://abdelaleemadel.github.io/freegames/` },
   ]
   projects = this.allProjects;
 
+  showProject(url: string | undefined) {
+    window.open(url);
+  }
 }

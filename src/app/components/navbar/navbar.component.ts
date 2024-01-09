@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 
 
@@ -9,7 +9,13 @@ import { ViewportScroller } from '@angular/common';
 })
 export class NavbarComponent {
   constructor(private scroller: ViewportScroller) { }
-  goToProjects() {
-    this.scroller.scrollToAnchor('works')
+  availWidth: number = 993;
+  @Input() isSmall: boolean = false;
+
+
+  goTo(section: string) {
+    this.scroller.scrollToAnchor(section)
   }
+
+
 }

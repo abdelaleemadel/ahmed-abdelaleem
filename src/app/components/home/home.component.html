@@ -10,8 +10,8 @@
     A Front-end Web Developer. I specialize in building interactive and responsive web applications using Angular.
   </p>
   <div class="d-flex">
-    <button type="button" class="main-btn mx-3">GET IN TOUCH</button>
-    <button type="button" class="outline-btn mx-3" (click)="goToProjects()">VIEW ALL WORKS</button>
+    <button type="button" class="main-btn mx-3 para-5" (click)="goTo('contact')">GET IN TOUCH</button>
+    <button type="button" class="outline-btn mx-3 para-5" (click)="goTo('projects')">VIEW ALL WORKS</button>
   </div>
 </section>
 
@@ -22,6 +22,7 @@
   </div>
   <div id="moving-bar" class="heading-6 px-3 d-flex align-items-center position-absolute overflow-hidden">
     <div id="moving-words" class="d-flex position-absolute border-primary justify-content-evenly align-items-center">
+      <!-- Innovate, Implement, Inspire -->
       <ng-template ngFor let-hero [ngForOf]="[0, 1, 2, 3,4,5,6,7]">
         <div class="star position-absolute gradient moving-word">
           <div class="circle position-absolute"></div>
@@ -30,7 +31,7 @@
           <div class="circle position-absolute"></div>
         </div>
         <div class="moving-word">
-          DESIGN
+          INNOVATE
         </div>
         <div class="star position-absolute gradient moving-word">
           <div class="circle position-absolute"></div>
@@ -39,7 +40,7 @@
           <div class="circle position-absolute"></div>
         </div>
         <div class="moving-word">
-          DEVELOPE
+          IMPLEMENT
         </div>
         <div class="star position-absolute gradient moving-word">
           <div class="circle position-absolute"></div>
@@ -48,7 +49,7 @@
           <div class="circle position-absolute"></div>
         </div>
         <div class="moving-word">
-          DISCOVER
+          INSPIRE
         </div>
       </ng-template>
     </div>
@@ -57,7 +58,7 @@
 
 <!-- ========================================================================== -->
 <!-- MY PROJECTS -->
-<section class="main-bg main-color py-5" id="works">
+<section class="main-bg main-color py-5" id="projects">
   <div class="container">
     <p class="heading-3">
       Look at My<br /> <span class="gradient-text">Projects</span>
