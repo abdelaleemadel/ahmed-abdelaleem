@@ -32,7 +32,4 @@ export class ToolsComponent implements OnChanges, OnInit {
       this.languages = true;
     }
   }
-
-
-
 }

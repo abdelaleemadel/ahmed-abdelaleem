@@ -1,18 +1,19 @@
-<nav class="navbar navbar-expand-lg main-bg fixed-top" data-bs-theme="dark">
-  <div class="container ">
-    <a class="navbar-brand heading-6 gradient-md-text main-color" routerLink="./home">Ahmed A.</a>
-    <button class="navbar-toggler-icon navbar-toggler border-0 " data-bs-toggle="collapse" type="button"
-      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-      aria-label="Toggle navigation"></button>
+<nav class="navbar navbar-expand-lg main-bg fixed-top d-flex flex-nowrap justify-content-center" data-bs-theme="dark">
+  <div class="container ms-0 me-0">
+    <a class="navbar-brand heading-6 gradient-md-text main-color " routerLink="./home">Ahmed A.</a>
+    <i class="fa-solid fa-bars fs-2 navbar-toggler main-color  ms-auto " data-bs-toggle="collapse" type="button"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-label="Toggle navigation"></i>
+
     <div class="collapse navbar-collapse justify-content-between px-4" id="navbarSupportedContent">
       <ul class="navbar-nav  mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link  main-color para-1 " aria-current="page" routerLink="./home"
+        <li class="nav-item d-flex ">
+          <a class="nav-link  main-color para-1 px-2" aria-current="page" routerLink="./home"
             [attr.data-bs-toggle]="isSmall?'collapse':''" data-bs-target="#navbarSupportedContent">Home</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link cursor-pointer main-color para-1" aria-current="page" routerLink="./projectDetails"
+        <li class="nav-item d-flex ">
+          <a class="nav-link cursor-pointer main-color para-1 px-2" aria-current="page" routerLink="./projectDetails"
             [attr.data-bs-toggle]="isSmall?'collapse':''" data-bs-target="#navbarSupportedContent">Projects</a>
         </li>
       </ul>
@@ -25,4 +26,6 @@
       </ul>
     </div>
   </div>
+  <i *ngIf="!isDark" class="fa-solid fa-moon fs-2 main-color ms-2 cursor-pointer" (click)="changeMode()"></i>
+  <i *ngIf="isDark" class="fa-solid fa-sun fs-2 main-color ms-2 cursor-pointer" (click)="changeMode()"></i>
 </nav>
