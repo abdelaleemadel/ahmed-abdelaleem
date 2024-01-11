@@ -1,7 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, ElementRef, AfterContentInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-declare const $: any;
 // @ts-ignore
 import ScrollOut from 'scroll-out';
 

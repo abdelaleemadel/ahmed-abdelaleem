@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg main-bg fixed-top d-flex flex-nowrap justify-content-center" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg main-bg fixed-top d-flex flex-nowrap justify-content-center px-2"
+  data-bs-theme="dark">
   <div class="container ms-0 me-0">
     <a class="navbar-brand heading-6 gradient-md-text main-color " routerLink="./home">Ahmed A.</a>
     <i class="fa-solid fa-bars fs-2 navbar-toggler main-color  ms-auto " data-bs-toggle="collapse" type="button"
@@ -26,6 +27,6 @@
       </ul>
     </div>
   </div>
-  <i *ngIf="!isDark" class="fa-solid fa-moon fs-2 main-color ms-2 cursor-pointer" (click)="changeMode()"></i>
-  <i *ngIf="isDark" class="fa-solid fa-sun fs-2 main-color ms-2 cursor-pointer" (click)="changeMode()"></i>
+  <i *ngIf="!isDark" class="fa-solid fa-moon fs-2 main-color mx-2 cursor-pointer" (click)="changeMode()"></i>
+  <i *ngIf="isDark" class="fa-solid fa-sun fs-2 main-color mx-2 cursor-pointer" (click)="changeMode()"></i>
 </nav>
