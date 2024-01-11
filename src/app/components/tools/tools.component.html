@@ -9,8 +9,10 @@
     </li>
   </ul>
 </nav>
-<section class=" w-100 d-flex flex-wrap gap-5 justify-content-center ">
-  <div class="d-flex flex-column align-items-center secondary-bg px-4 py-4 justify-content-between"
+<section
+  class=" w-100 d-flex flex-wrap gap-5 justify-content-center animate__animated animate__rollIn animate__delay-1s">
+  <div
+    class="d-flex flex-column align-items-center secondary-bg px-4 py-4 justify-content-between animate__animated animate__rollIn"
     *ngFor="let image of shownTools">
     <img [src]="path+image+'.svg'" width="60" [alt]="image+' logo'" [title]="image">
     <p class="heading-6 mt-3 mb-0">{{image}}</p>
