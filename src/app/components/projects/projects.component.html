@@ -1,18 +1,26 @@
 <div class="row gy-5" id="projects">
-  <div *ngFor="let project of projects" class="col-12 col-sm-6">
-    <div class="secondary-bg rounded-4 overflow-hidden father position-relative">
+  <div *ngFor="let project of projects" class="col-12 col-sm-6 position-relative">
+    <div *ngIf="!project.ready"
+      class="position-absolute z-2 top-0 bottom-0 start-0 end-0 d-flex justify-content-around align-items-center flex-column">
+      <p class="heading-5 mb-0 inv-main-bg">COMING SOON</p>
+      <p class="heading-5 mb-0 ">{{project.name}}</p>
+    </div>
+    <div class="secondary-bg rounded-4 overflow-hidden father position-relative" [class.soon]="!project.ready">
+
       <img src={{project.source}} class="w-100" alt="...">
       <div class="p-4 ">
         <p class="heading-6 mb-0">{{project.name}}</p>
       </div>
       <div
         class="d-flex mx-auto flex-wrap p-1 layer justify-content-evenly justify-content-sm-between justify-content-xl-evenly">
-        <button type="button" class="secondary-btn mx-1 para-5" (click)="showProject(project.live)">Live <i
-            class="fa-solid fa-arrow-up-right-from-square ms-1"></i></button>
-        <button type="button" class="secondary-btn mx-1 para-5" (click)="showProject(project.github)">Source <i
-            class="fa-brands fa-github ms-1"></i></button>
-        <a type="button" class="secondary-btn mx-1 para-5 link-underline link-underline-opacity-0"
-          [routerLink]="['../projectDetails', {id: project.id}]">Details</a>
+        <button type="button" class="secondary-btn mx-1 para-5" (click)="showProject(project.live)"
+          [disabled]="!project.ready">Live <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></button>
+        <button type="button" class="secondary-btn mx-1 para-5" (click)="showProject(project.github)"
+          [disabled]="!project.ready">Source <i class="fa-brands fa-github ms-1"></i></button>
+        <a type="button" [routerLink]="['../projectDetails', {id: project.id}]"><button type="button"
+            class="secondary-btn mx-1 para-5 link-underline link-underline-opacity-0" [disabled]="!project.ready">
+            Details
+          </button></a>
       </div>
     </div>
   </div>

@@ -34,29 +34,33 @@
         </div>
       </div>
     </div>
-    <!-- Project Description -->
 
-    <div class="row gy-3 gx-5 my-5">
-      <div class="col-12 col-md-5 ">
-        <p class="heading-5">ABOUT <span class="gradient-text">THE PROJECT</span></p>
-        <p class="para-4">{{project?.purpose}}</p>
-      </div>
-      <div class="col-12 col-md-7">
-        <p class="para-1 newline">{{project?.description}}</p>
-      </div>
-      <div class="d-flex">
-        <button type="button" class="secondary-btn mx-1 para-5" (click)="showProject(project.live)"><span
-            class="mx-3">Live <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></span> </button>
-        <button type="button" class="secondary-btn mx-1 para-5" (click)="showProject(project.github)">Source <i
-            class="fa-brands fa-github ms-1"></i></button>
+    <!-- Project Description -->
+    <div class="animate__animated  " data-scroll="in">
+      <div class="row gy-3 gx-5 my-5">
+        <div class="col-12 col-md-5 ">
+          <p class="heading-5">ABOUT <span class="gradient-text">THE PROJECT</span></p>
+          <p class="para-4">{{project?.purpose}}</p>
+        </div>
+        <div class="col-12 col-md-7">
+          <p class="para-1 newline">{{project?.description}}</p>
+        </div>
+        <div class="d-flex">
+          <button type="button" class="secondary-btn mx-1 para-5" (click)="showProject(project.live)"><span
+              class="mx-3">Live <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i></span> </button>
+          <button type="button" class="secondary-btn mx-1 para-5" (click)="showProject(project.github)">Source <i
+              class="fa-brands fa-github ms-1"></i></button>
+        </div>
       </div>
     </div>
 
-    <div class="row gy-3 gx-5 my-5">
-      <!-- Languages &  FRAMEWORKS !!! tools component -->
-      <div class="col-12">
-        <p class="heading-5 mb-5 text-wrap"><span class="gradient-text">The Project </span> is built with. </p>
-        <app-tools [tools]="project?.tools"></app-tools>
+    <div data-scroll="in" class="animate__animated  main-bg">
+      <div class="row gy-3 gx-5 my-5">
+        <!-- Languages &  FRAMEWORKS !!! tools component -->
+        <div class="col-12">
+          <p class="heading-5 mb-5 text-wrap"><span class="gradient-text">The Project </span> is built with. </p>
+          <app-tools [tools]="project?.tools"></app-tools>
+        </div>
       </div>
     </div>
   </div>
@@ -64,10 +68,13 @@
 <!-- ================================================================ -->
 <!-- Discover more projects -->
 <section class="main-bg main-color py-5">
-  <div class="container">
-    <p class="heading-3 mb-4">
-      More Cool<br /> <span class="gradient-text">Projects</span>
-    </p>
-    <app-projects [id]="id"></app-projects>
+  <div data-scroll="in" class="animate__animated main-bg">
+    <div class="container">
+      <p class="heading-3 mb-4">
+        More Cool<br /> <span class="gradient-text">Projects</span>
+      </p>
+      <app-projects [id]="id"></app-projects>
+    </div>
   </div>
+
 </section>

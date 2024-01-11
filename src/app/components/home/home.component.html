@@ -17,58 +17,60 @@
 
 <!-- =========================================================================== -->
 <!-- The moving section -->
-<section id="news" class="w-100 mb-5 position-relative  d-flex flex-column justify-content-center">
-  <div id="static-bar" class="gradient w-100">
-  </div>
-  <div id="moving-bar" class="heading-6 px-3 d-flex align-items-center position-absolute overflow-hidden">
-    <div id="moving-words" class="d-flex position-absolute border-primary justify-content-evenly align-items-center">
-      <!-- Innovate, Implement, Inspire -->
-      <ng-template ngFor let-hero [ngForOf]="[0, 1, 2, 3,4,5,6,7]">
-        <div class="star position-absolute gradient moving-word">
-          <div class="circle position-absolute"></div>
-          <div class="circle position-absolute"></div>
-          <div class="circle position-absolute"></div>
-          <div class="circle position-absolute"></div>
-        </div>
-        <div class="moving-word">
-          INNOVATE
-        </div>
-        <div class="star position-absolute gradient moving-word">
-          <div class="circle position-absolute"></div>
-          <div class="circle position-absolute"></div>
-          <div class="circle position-absolute"></div>
-          <div class="circle position-absolute"></div>
-        </div>
-        <div class="moving-word">
-          IMPLEMENT
-        </div>
-        <div class="star position-absolute gradient moving-word">
-          <div class="circle position-absolute"></div>
-          <div class="circle position-absolute"></div>
-          <div class="circle position-absolute"></div>
-          <div class="circle position-absolute"></div>
-        </div>
-        <div class="moving-word">
-          INSPIRE
-        </div>
-      </ng-template>
+<div id="homeNews" class="animate__animated" data-scroll="in">
+  <section id="news" class="w-100 mb-5 position-relative  d-flex flex-column justify-content-center">
+    <div id="static-bar" class="gradient w-100">
     </div>
-  </div>
-</section>
+    <div id="moving-bar" class="heading-6 px-3 d-flex align-items-center position-absolute overflow-hidden">
+      <div id="moving-words" class="d-flex position-absolute border-primary justify-content-evenly align-items-center">
+        <!-- Innovate, Implement, Inspire -->
+        <ng-template ngFor let-hero [ngForOf]="[0, 1, 2, 3,4,5,6,7]">
+          <div class="star position-absolute gradient moving-word">
+            <div class="circle position-absolute"></div>
+            <div class="circle position-absolute"></div>
+            <div class="circle position-absolute"></div>
+            <div class="circle position-absolute"></div>
+          </div>
+          <div class="moving-word">
+            INNOVATE
+          </div>
+          <div class="star position-absolute gradient moving-word">
+            <div class="circle position-absolute"></div>
+            <div class="circle position-absolute"></div>
+            <div class="circle position-absolute"></div>
+            <div class="circle position-absolute"></div>
+          </div>
+          <div class="moving-word">
+            IMPLEMENT
+          </div>
+          <div class="star position-absolute gradient moving-word">
+            <div class="circle position-absolute"></div>
+            <div class="circle position-absolute"></div>
+            <div class="circle position-absolute"></div>
+            <div class="circle position-absolute"></div>
+          </div>
+          <div class="moving-word">
+            INSPIRE
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </section>
+</div>
 
 <!-- ========================================================================== -->
 <!-- MY PROJECTS -->
-<section class="main-bg main-color py-5">
+<section class="main-bg main-color py-5 animate__animated" data-scroll="in" id="homeProjects">
   <div class="container">
     <p class="heading-3">
       Look at My<br /> <span class="gradient-text">Projects</span>
     </p>
-    <app-projects></app-projects>
+    <app-projects class="projectsComponent"></app-projects>
   </div>
 </section>
 <!-- ========================================================================== -->
 <!-- Languages & SKILLS & FRAMEWORKS -->
-<section class="main-bg main-color py-5">
+<section class="main-bg main-color py-5 animate__animated" data-scroll="in" id="homeSkills">
   <div class="container">
     <p class="heading-3 mb-5">
       What I Do.

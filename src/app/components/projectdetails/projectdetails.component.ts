@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, AfterContentInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+// @ts-ignore
+import ScrollOut from 'scroll-out';
 
 
 @Component({
@@ -7,8 +9,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './projectdetails.component.html',
   styleUrls: ['./projectdetails.component.scss']
 })
-export class ProjectdetailsComponent implements OnInit {
-  constructor(private _ActivatedRoute: ActivatedRoute, private _Router: Router) { }
+export class ProjectdetailsComponent implements OnInit, AfterContentInit, OnDestroy {
+  constructor(private _ActivatedRoute: ActivatedRoute, private _Router: Router, private el: ElementRef) { }
+  scroll: any;
+
   id: any;
   path: string = '../../assets/images/recipes';
   source: string[] = [`home`, `details`, `hover`, `categories`];
@@ -22,8 +26,19 @@ export class ProjectdetailsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.displaySpecificProject()
+    this.displaySpecificProject();
 
+  }
+  ngAfterContentInit(): void {
+    this.scroll = ScrollOut({
+      onShown(el: any) {
+        el.classList.remove("animate__fadeOut");
+        el.classList.add("animate__fadeInUp");
+      },
+      onHidden(el: any) {
+        el.classList.add("animate__fadeOut")
+      }
+    });
   }
 
   showProject(url: string | undefined) {
@@ -47,4 +62,9 @@ export class ProjectdetailsComponent implements OnInit {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   }
+
+  /* Destroy scroll out */
+  ngOnDestroy(): void {
+/*     this.scroll.tearDown()
+ */  }
 }

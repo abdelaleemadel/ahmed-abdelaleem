@@ -15,6 +15,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { NgOptimizedImage } from '@angular/common';
 import { ToolsComponent } from './components/tools/tools.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
