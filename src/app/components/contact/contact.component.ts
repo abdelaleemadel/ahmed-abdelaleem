@@ -20,7 +20,6 @@ export class ContactComponent {
   });
 
   contact(contactForm: FormGroup): void {
-    console.log(contactForm.value);
     if (contactForm.status === 'VALID') {
       try {
         this.handleContact(contactForm.value).subscribe({

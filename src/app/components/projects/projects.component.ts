@@ -26,7 +26,5 @@ export class ProjectsComponent implements OnChanges {
   ]
   projects = this.allProjects;
 
-  showProject(url: string | undefined) {
-    window.open(url);
-  }
+
 }

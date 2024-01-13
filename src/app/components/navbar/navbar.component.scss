@@ -1,11 +1,4 @@
-button.navbar-toggler {
-
-  &:focus,
-  &:focus-visible {
-    box-shadow: none !important;
-  }
-}
-
 nav {
+  -webkit-box-shadow: 2px 2px 10px var(--bg-secondary) !important;
   box-shadow: 2px 2px 10px var(--bg-secondary) !important;
 }
