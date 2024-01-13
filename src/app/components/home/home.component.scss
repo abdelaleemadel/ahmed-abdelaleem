@@ -3,6 +3,8 @@
 }
 
 
+
+
 #news {
   min-height: 10rem;
   overflow-x: hidden;
@@ -60,11 +62,7 @@
   }
 }
 
-@media screen and (min-width:1500px) {
-  #moving-bar {
-    transform: rotateZ(-2deg) !important;
-  }
-}
+
 
 
 
@@ -100,5 +98,26 @@
 
   100% {
     transform: rotateX(-90deg) rotate(-360deg);
+  }
+}
+
+/* Media query very large screen */
+@media screen and (min-width:1500px) {
+  #moving-bar {
+    transform: rotateZ(-2deg) !important;
+  }
+}
+
+
+/* In mozilla only */
+@-moz-document url-prefix() {
+
+  #moving-words {
+    display: none !important;
+  }
+
+  #mozillaOnly {
+    display: flex !important;
+    margin-inline: -1rem;
   }
 }

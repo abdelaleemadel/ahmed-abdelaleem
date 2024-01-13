@@ -22,7 +22,7 @@
     <div id="static-bar" class="gradient w-100">
     </div>
     <div id="moving-bar" class="heading-6 px-3 d-flex align-items-center position-absolute overflow-hidden">
-      <div id="moving-words" class="d-flex position-absolute border-primary justify-content-evenly align-items-center">
+      <div id="moving-words" class="d-flex position-absolute  justify-content-evenly align-items-center">
         <!-- Innovate, Implement, Inspire -->
         <ng-template ngFor let-hero [ngForOf]="[0, 1, 2, 3,4,5,6,7]">
           <div class="star position-absolute gradient moving-word">
@@ -53,6 +53,33 @@
             INSPIRE
           </div>
         </ng-template>
+      </div>
+
+      <!-- Section to display on Mozilla cause, it doesn't support the 3d-movement properly -->
+      <div id="mozillaOnly" class="position-absolute w-100  px-0 d-none  justify-content-evenly align-items-center">
+        <div>
+          <p class="mb-0 para-5">INNOVATE</p>
+        </div>
+        <div class="star position-relative gradient">
+          <div class="circle position-absolute"></div>
+          <div class="circle position-absolute"></div>
+          <div class="circle position-absolute"></div>
+          <div class="circle position-absolute"></div>
+        </div>
+        <div class="">
+          <p class="mb-0 para-5">IMPLEMENT</p>
+        </div>
+        <div class="star position-relative gradient ">
+          <div class="circle position-absolute"></div>
+          <div class="circle position-absolute"></div>
+          <div class="circle position-absolute"></div>
+          <div class="circle position-absolute"></div>
+        </div>
+        <div class="">
+          <p class="mb-0 para-5">INSPIRE</p>
+        </div>
+
+
       </div>
     </div>
   </section>
