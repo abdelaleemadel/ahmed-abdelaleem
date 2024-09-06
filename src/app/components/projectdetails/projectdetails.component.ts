@@ -14,7 +14,7 @@ export class ProjectdetailsComponent implements OnInit, AfterContentInit {
   scroll: any;
 
   id: any;
-  path: string = '../../assets/images/recipes';
+  path: string = '../../assets/images/details';
   source: string[] = [`home`, `details`, `hover`, `categories`];
   project: any = null;
   projects = [
@@ -22,7 +22,9 @@ export class ProjectdetailsComponent implements OnInit, AfterContentInit {
 
     { name: 'Recipes', type: 'video', vsource: '<iframe class="e2e-iframe-trusted-src position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100 border-0" src="https://www.youtube.com/embed/9oJQrVE8R3k?si=Nn0WSX-4lnxqAmDi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>', purpose: `Recipes: Your online destination for finding and sharing delectable dishes from around the world`, description: `Recipes is a web application that allows users to browse and share recipes online. Users can search for recipes by name, ingredient, or category, and view the recipe details including the ingredients, instructions, and nutritional information. The application is built with JavaScript, Bootstrap, and jQuery. It also uses API to get the recipe data.`, tools: { languages: [`Javascript`, `CSS`, `HTML`], frameworks: [`Bootstrap`, `JQuery`] }, github: `https://github.com/abdelaleemadel/recipes`, live: `https://abdelaleemadel.github.io/recipes/` },
 
-    { name: 'Free Games ', type: 'img', source: this.source, purpose: `Free Games: Your online source for playing and discovering awesome games for free.`, description: `Free Games is a web application that allows users to play various games online for free. Users can choose from different genres and categories of games, and enjoy the fun and challenge of gaming. The application was built using HTML, CSS, JavaScript, and Bootstrap. It also uses an API to fetch the game data from a third-party source.`, tools: { languages: [`Javascript`, `CSS`, `HTML`], frameworks: [`Bootstrap`, `JQuery`] }, github: `https://github.com/abdelaleemadel/freegames`, live: `https://abdelaleemadel.github.io/freegames/` }]
+    { name: 'Free Games ', type: 'img', source: this.source, purpose: `Free Games: Your online source for playing and discovering awesome games for free.`, description: `Free Games is a web application that allows users to play various games online for free. Users can choose from different genres and categories of games, and enjoy the fun and challenge of gaming. The application was built using HTML, CSS, JavaScript, and Bootstrap. It also uses an API to fetch the game data from a third-party source.`, tools: { languages: [`Javascript`, `CSS`, `HTML`], frameworks: [`Bootstrap`, `JQuery`] }, github: `https://github.com/abdelaleemadel/freegames`, live: `https://abdelaleemadel.github.io/freegames/` },
+
+    { name: 'React Quiz', type: 'img', source: ['hoverAnswer', 'answered', 'wrongAnswer', 'score'], purpose: `React Quiz: This Quiz features 15 questions designed to test your knowledge of React concepts.`, description: `React Quiz is a fun and interactive quiz application built with React. The app showcases the use of the useReducer hook, providing a practical example of its implementation. Based on “The Ultimate React Course 2024” by Jonas Schmedtmann, this project highlights my skills in React development and my ability to create engaging user interfaces. The application was built using React, JSX, CSS, JavaScript.`, tools: { languages: [`Javascript`, `CSS`, `HTML`], frameworks: [`React`] }, github: `https://github.com/abdelaleemadel/React-Quiz`, live: `https://react-quiz-five-iota.vercel.app/` }]
 
   ngOnInit(): void {
 
