@@ -23,7 +23,8 @@ export class ProjectsComponent implements OnChanges {
     { id: 1, name: 'Recipes', source: `${this.path}/recipes.PNG`, ready: true, github: `https://github.com/abdelaleemadel/recipes`, live: `https://abdelaleemadel.github.io/recipes/` },
     { id: 2, name: 'Free Games', source: `${this.path}/freeGames.png`, ready: true, github: `https://github.com/abdelaleemadel/freegames`, live: `https://abdelaleemadel.github.io/freegames/` },
     { id: 3, name: 'React Quiz', source: `${this.path}/react-quiz.png`, github: `https://github.com/abdelaleemadel/React-Quiz`, live: `https://react-quiz-five-iota.vercel.app/`, ready: true },
-    { id: 4, name: 'Football Players', source: `${this.path}/football.PNG`, github: '', live: '', ready: false }
+    { id: 4, name: 'WorldWise', source: `${this.path}/worldwise.png`, github: '', live: '', ready: true },
+    { id: 5, name: 'Football Players', source: `${this.path}/football.PNG`, github: '', live: '', ready: false }
 
   ]
   projects = this.allProjects;
