@@ -29,7 +29,7 @@ export class HomeComponent implements AfterContentInit {
   }
 
 
-  tools = { languages: [`Javascript`, `Typescript`, `CSS`, `HTML`, `Sass`], frameworks: [`Angular`, `Bootstrap`, `JQuery`, `React`] }
+  tools = { languages: [`Javascript`, `Typescript`, `CSS`, `HTML`, `Sass`], frameworks: [`React`, `Redux`, `React Query`, `Tailwind`, `Angular`, `Bootstrap`, `JQuery`,] }
   goTo(section: string) {
     this.scroller.scrollToAnchor(section)
   }
